@@ -1,0 +1,601 @@
+{
+  "project": {
+    "id": "barcelonaculinaryhub",
+    "name": "Barcelona Culinary Hub",
+    "version": "1.0.0",
+    "brand": {
+      "colors": {
+        "primary": "#1a1a1a",
+        "secondary": "#d4af37",
+        "accent": "#8b0000",
+        "text": "#333333",
+        "textLight": "#ffffff",
+        "background": "#ffffff",
+        "backgroundDark": "#f5f5f5"
+      },
+      "typography": {
+        "fontFamily": {
+          "primary": "'Montserrat', sans-serif",
+          "secondary": "'Open Sans', sans-serif"
+        },
+        "fontSizes": {
+          "h1": "clamp(2rem, 5vw, 4rem)",
+          "h2": "clamp(1.5rem, 3vw, 2.5rem)",
+          "h3": "clamp(1.25rem, 2vw, 1.75rem)",
+          "body": "1rem",
+          "small": "0.875rem"
+        }
+      },
+      "spacing": {
+        "xs": "0.25rem",
+        "sm": "0.5rem",
+        "md": "1rem",
+        "lg": "2rem",
+        "xl": "4rem",
+        "xxl": "6rem"
+      }
+    },
+    "thirdParty": {
+      "fonts": {
+        "google": [
+          "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap",
+          "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+        ]
+      }
+    }
+  },
+  "page": {
+    "id": "homepage",
+    "route": "/",
+    "title": "Escuela de Cocina y Gastronomía | Barcelona Culinary Hub",
+    "meta": {
+      "description": "Escuela Superior de Gastronomía en Barcelona. Másters, Grado y Formación Profesional en Alta Cocina.",
+      "language": "es"
+    },
+    "layout": "default_layout"
+  },
+  "layout": {
+    "id": "default_layout",
+    "structure": [
+      {
+        "organism": "main_header"
+      },
+      {
+        "organisms": [
+          "hero_banner",
+          "featured_cards",
+          "value_props",
+          "blog_section",
+          "quotes_carousel",
+          "masters_online",
+          "masters_presencial"
+        ]
+      },
+      {
+        "organism": "main_footer"
+      }
+    ]
+  },
+  "atoms": {
+    "images": [
+      {
+        "id": "logo_main",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/themes/custom/sbx_theme/isologotipo.svg",
+          "alt": "Logo Barcelona Culinary Hub",
+          "loading": "eager",
+          "height": "60"
+        }
+      },
+      {
+        "id": "hero_background",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/files/styles/img_style_16_9_1920/public/images/Chef_Barcelona%20Culinary%20Hub.jpg.webp",
+          "alt": "Chef Barcelona Culinary Hub",
+          "loading": "eager",
+          "width": "1920",
+          "height": "1080"
+        },
+        "styles": {
+          "width": "100%",
+          "height": "100%",
+          "objectFit": "cover"
+        }
+      },
+      {
+        "id": "icon_formacion",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/files/styles/img_style_1_1_200/public/images/1%20%282%29.png.webp",
+          "alt": "Formación en Management Culinario",
+          "width": "80",
+          "height": "80"
+        }
+      },
+      {
+        "id": "icon_proyeccion",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/files/styles/img_style_1_1_200/public/images/2%20%282%29.png.webp",
+          "alt": "Proyección Internacional",
+          "width": "80",
+          "height": "80"
+        }
+      },
+      {
+        "id": "icon_expertos",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/files/styles/img_style_1_1_200/public/images/4.png.webp",
+          "alt": "Expertos del sector",
+          "width": "80",
+          "height": "80"
+        }
+      },
+      {
+        "id": "icon_campus",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/files/styles/img_style_1_1_200/public/images/campus-bch_0.png.webp",
+          "alt": "Hub Gastronómico",
+          "width": "80",
+          "height": "80"
+        }
+      }
+    ],
+    "headings": [
+      {
+        "id": "hero_heading",
+        "subatom": "Heading",
+        "config": {
+          "level": 1,
+          "content": "ESCUELA SUPERIOR DE GASTRONOMÍA"
+        },
+        "styles": {
+          "color": "var(--color-text-light)",
+          "fontWeight": "700",
+          "textTransform": "uppercase",
+          "fontSize": "var(--font-size-h1)",
+          "textAlign": "center",
+          "margin": "0"
+        }
+      },
+      {
+        "id": "hero_subheading",
+        "subatom": "Heading",
+        "config": {
+          "level": 2,
+          "content": "APRENDE MUCHO MÁS QUE ALTA COCINA"
+        },
+        "styles": {
+          "color": "var(--color-text-light)",
+          "fontWeight": "400",
+          "textTransform": "uppercase",
+          "fontSize": "clamp(1rem, 2vw, 1.5rem)",
+          "textAlign": "center",
+          "marginTop": "var(--spacing-md)"
+        }
+      },
+      {
+        "id": "section_heading_changed",
+        "subatom": "Heading",
+        "config": {
+          "level": 2,
+          "content": "El mundo de la gastronomía ha cambiado, y la forma de estudiarlo también."
+        },
+        "styles": {
+          "fontSize": "var(--font-size-h2)",
+          "textAlign": "center",
+          "marginBottom": "var(--spacing-xl)"
+        }
+      },
+      {
+        "id": "section_heading_blog",
+        "subatom": "Heading",
+        "config": {
+          "level": 2,
+          "content": "BCH AL PUNTO"
+        },
+        "styles": {
+          "fontSize": "var(--font-size-h2)",
+          "textAlign": "center",
+          "marginBottom": "var(--spacing-lg)"
+        }
+      },
+      {
+        "id": "section_heading_masters_online",
+        "subatom": "Heading",
+        "config": {
+          "level": 2,
+          "content": "MÁSTERS ONLINE"
+        },
+        "styles": {
+          "fontSize": "var(--font-size-h2)",
+          "textAlign": "center",
+          "marginBottom": "var(--spacing-lg)"
+        }
+      },
+      {
+        "id": "section_heading_masters_presencial",
+        "subatom": "Heading",
+        "config": {
+          "level": 2,
+          "content": "MÁSTERS PRESENCIALES"
+        },
+        "styles": {
+          "fontSize": "var(--font-size-h2)",
+          "textAlign": "center",
+          "marginBottom": "var(--spacing-lg)"
+        }
+      }
+    ],
+    "texts": [
+      {
+        "id": "text_intro",
+        "subatom": "Text",
+        "config": {
+          "tag": "p",
+          "content": "El Barcelona Culinary Hub es la Escuela Superior de Gastronomía con foco en management y visión de negocio aplicada a la restauración."
+        },
+        "styles": {
+          "fontSize": "var(--font-size-body)",
+          "textAlign": "center",
+          "maxWidth": "800px",
+          "margin": "0 auto var(--spacing-lg)"
+        }
+      },
+      {
+        "id": "text_value_formacion",
+        "subatom": "Text",
+        "config": {
+          "tag": "p",
+          "content": "Formación en Management Culinario"
+        },
+        "styles": {
+          "textAlign": "center",
+          "marginTop": "var(--spacing-sm)"
+        }
+      },
+      {
+        "id": "text_value_proyeccion",
+        "subatom": "Text",
+        "config": {
+          "tag": "p",
+          "content": "Proyección Internacional"
+        },
+        "styles": {
+          "textAlign": "center",
+          "marginTop": "var(--spacing-sm)"
+        }
+      },
+      {
+        "id": "text_value_expertos",
+        "subatom": "Text",
+        "config": {
+          "tag": "p",
+          "content": "Expertos del sector"
+        },
+        "styles": {
+          "textAlign": "center",
+          "marginTop": "var(--spacing-sm)"
+        }
+      },
+      {
+        "id": "text_value_campus",
+        "subatom": "Text",
+        "config": {
+          "tag": "p",
+          "content": "HUB GASTRONÓMICO"
+        },
+        "styles": {
+          "textAlign": "center",
+          "marginTop": "var(--spacing-sm)",
+          "fontWeight": "700"
+        }
+      },
+      {
+        "id": "quote_1",
+        "subatom": "Text",
+        "config": {
+          "tag": "blockquote",
+          "content": "\"Una receta no tiene alma. Tú, como cocinero, debes traer alma a la receta.\" - Thomas Keller"
+        },
+        "styles": {
+          "fontSize": "var(--font-size-h3)",
+          "textAlign": "center",
+          "fontStyle": "italic",
+          "padding": "var(--spacing-xl)"
+        }
+      },
+      {
+        "id": "quote_2",
+        "subatom": "Text",
+        "config": {
+          "tag": "blockquote",
+          "content": "\"Un buen chef tiene que ser un gerente, un hombre de negocios y un gran cocinero.\" - Wolfgang Puck"
+        },
+        "styles": {
+          "fontSize": "var(--font-size-h3)",
+          "textAlign": "center",
+          "fontStyle": "italic",
+          "padding": "var(--spacing-xl)"
+        }
+      },
+      {
+        "id": "quote_3",
+        "subatom": "Text",
+        "config": {
+          "tag": "blockquote",
+          "content": "\"Haz lo que haces tan bien, que tus clientes querrán volver con sus amigos para verlo otra vez.\" – Walt Disney"
+        },
+        "styles": {
+          "fontSize": "var(--font-size-h3)",
+          "textAlign": "center",
+          "fontStyle": "italic",
+          "padding": "var(--spacing-xl)"
+        }
+      },
+      {
+        "id": "footer_text_copyright",
+        "subatom": "Text",
+        "config": {
+          "tag": "p",
+          "content": "© Barcelona Culinary Hub. Planeta Formación y Universidades. Todos los derechos reservados."
+        },
+        "styles": {
+          "textAlign": "center",
+          "fontSize": "var(--font-size-small)",
+          "marginTop": "var(--spacing-lg)"
+        }
+      }
+    ],
+    "links": [
+      {
+        "id": "link_home",
+        "subatom": "Link",
+        "config": {
+          "href": "https://www.barcelonaculinaryhub.com/",
+          "target": "_self",
+          "ariaLabel": "Ir a la página principal"
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "id": "btn_search",
+        "subatom": "Button",
+        "config": {
+          "type": "button",
+          "content": "Buscar"
+        },
+        "styles": {
+          "backgroundColor": "transparent",
+          "border": "1px solid var(--color-text)",
+          "padding": "var(--spacing-sm) var(--spacing-md)",
+          "cursor": "pointer"
+        }
+      }
+    ]
+  },
+  "molecules": [
+    {
+      "id": "logo_link",
+      "type": "logo_header",
+      "atoms": {
+        "image": "logo_main",
+        "link": "link_home"
+      }
+    },
+    {
+      "id": "value_card_1",
+      "type": "value_card",
+      "atoms": {
+        "icon": "icon_formacion",
+        "text": "text_value_formacion"
+      },
+      "styles": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "padding": "var(--spacing-lg)"
+      }
+    },
+    {
+      "id": "value_card_2",
+      "type": "value_card",
+      "atoms": {
+        "icon": "icon_proyeccion",
+        "text": "text_value_proyeccion"
+      },
+      "styles": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "padding": "var(--spacing-lg)"
+      }
+    },
+    {
+      "id": "value_card_3",
+      "type": "value_card",
+      "atoms": {
+        "icon": "icon_expertos",
+        "text": "text_value_expertos"
+      },
+      "styles": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "padding": "var(--spacing-lg)"
+      }
+    },
+    {
+      "id": "value_card_4",
+      "type": "value_card",
+      "atoms": {
+        "icon": "icon_campus",
+        "text": "text_value_campus"
+      },
+      "styles": {
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "padding": "var(--spacing-lg)"
+      }
+    }
+  ],
+  "organisms": [
+    {
+      "id": "main_header",
+      "type": "site_header",
+      "molecules": {
+        "logo": "logo_link"
+      },
+      "atoms": {
+        "search": "btn_search"
+      },
+      "styles": {
+        "position": "sticky",
+        "top": "0",
+        "zIndex": "1000",
+        "backgroundColor": "var(--color-background)",
+        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+        "padding": "var(--spacing-md) var(--spacing-lg)",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "space-between"
+      }
+    },
+    {
+      "id": "hero_banner",
+      "type": "hero_section",
+      "atoms": {
+        "background": "hero_background",
+        "heading": "hero_heading",
+        "subheading": "hero_subheading"
+      },
+      "styles": {
+        "position": "relative",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "minHeight": "500px",
+        "padding": "var(--spacing-xxl)",
+        "overflow": "hidden"
+      },
+      "layout": {
+        "background": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "width": "100%",
+          "height": "100%",
+          "zIndex": "-2"
+        },
+        "overlay": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "width": "100%",
+          "height": "100%",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "zIndex": "-1"
+        },
+        "content": {
+          "zIndex": "1",
+          "maxWidth": "1200px"
+        }
+      }
+    },
+    {
+      "id": "featured_cards",
+      "type": "content_section",
+      "atoms": {
+        "heading": "section_heading_changed",
+        "text": "text_intro"
+      },
+      "styles": {
+        "padding": "var(--spacing-xxl) var(--spacing-lg)",
+        "backgroundColor": "var(--color-background-dark)"
+      }
+    },
+    {
+      "id": "value_props",
+      "type": "content_grid",
+      "molecules": {
+        "card1": "value_card_1",
+        "card2": "value_card_2",
+        "card3": "value_card_3",
+        "card4": "value_card_4"
+      },
+      "styles": {
+        "display": "grid",
+        "gridTemplateColumns": "repeat(auto-fit, minmax(200px, 1fr))",
+        "gap": "var(--spacing-lg)",
+        "padding": "var(--spacing-xl) var(--spacing-lg)",
+        "maxWidth": "1200px",
+        "margin": "0 auto"
+      }
+    },
+    {
+      "id": "blog_section",
+      "type": "content_section",
+      "atoms": {
+        "heading": "section_heading_blog"
+      },
+      "styles": {
+        "padding": "var(--spacing-xxl) var(--spacing-lg)",
+        "backgroundColor": "var(--color-background)"
+      }
+    },
+    {
+      "id": "quotes_carousel",
+      "type": "carousel",
+      "atoms": {
+        "quote1": "quote_1",
+        "quote2": "quote_2",
+        "quote3": "quote_3"
+      },
+      "styles": {
+        "padding": "var(--spacing-xxl) var(--spacing-lg)",
+        "backgroundColor": "var(--color-background-dark)"
+      }
+    },
+    {
+      "id": "masters_online",
+      "type": "content_section",
+      "atoms": {
+        "heading": "section_heading_masters_online"
+      },
+      "styles": {
+        "padding": "var(--spacing-xxl) var(--spacing-lg)",
+        "backgroundColor": "var(--color-background)"
+      }
+    },
+    {
+      "id": "masters_presencial",
+      "type": "content_section",
+      "atoms": {
+        "heading": "section_heading_masters_presencial"
+      },
+      "styles": {
+        "padding": "var(--spacing-xxl) var(--spacing-lg)",
+        "backgroundColor": "var(--color-background-dark)"
+      }
+    },
+    {
+      "id": "main_footer",
+      "type": "site_footer",
+      "atoms": {
+        "copyright": "footer_text_copyright"
+      },
+      "styles": {
+        "backgroundColor": "var(--color-primary)",
+        "color": "var(--color-text-light)",
+        "padding": "var(--spacing-xxl) var(--spacing-lg)"
+      }
+    }
+  ]
+}

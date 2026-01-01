@@ -1,0 +1,536 @@
+{
+  "project": {
+    "id": "barcelonaculinaryhub",
+    "name": "Barcelona Culinary Hub",
+    "version": "1.0.0",
+    "brand": {
+      "colors": {
+        "primary": "#1a1a1a",
+        "secondary": "#d4af37",
+        "accent": "#8b0000",
+        "text": "#333333",
+        "textLight": "#666666",
+        "background": "#ffffff",
+        "backgroundDark": "#f5f5f5"
+      },
+      "typography": {
+        "fontFamily": {
+          "primary": "'Montserrat', sans-serif",
+          "secondary": "'Open Sans', sans-serif"
+        },
+        "fontSizes": {
+          "h1": "clamp(2rem, 5vw, 4rem)",
+          "h2": "clamp(1.5rem, 3vw, 2.5rem)",
+          "h3": "clamp(1.25rem, 2vw, 1.75rem)",
+          "body": "1rem",
+          "small": "0.875rem"
+        },
+        "fontWeights": {
+          "light": 300,
+          "regular": 400,
+          "medium": 500,
+          "bold": 700
+        }
+      },
+      "spacing": {
+        "xs": "0.25rem",
+        "sm": "0.5rem",
+        "md": "1rem",
+        "lg": "2rem",
+        "xl": "4rem",
+        "xxl": "6rem"
+      },
+      "breakpoints": {
+        "mobile": "320px",
+        "tablet": "768px",
+        "desktop": "1024px",
+        "wide": "1440px"
+      }
+    },
+    "globalStyles": {
+      "reset": true,
+      "normalize": true
+    },
+    "thirdParty": {
+      "analytics": {
+        "provider": "google_analytics",
+        "id": "GA-XXXXXXXXX"
+      },
+      "cookieConsent": {
+        "provider": "cookiepro",
+        "scriptSrc": "https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js",
+        "dataKey": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+      },
+      "recaptcha": {
+        "provider": "google_recaptcha",
+        "version": "v3",
+        "siteKey": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      },
+      "fonts": {
+        "google": [
+          "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap",
+          "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+        ]
+      }
+    }
+  },
+  "clump": {
+    "id": "main_website",
+    "name": "BCH Main Website",
+    "type": "website",
+    "baseRoute": "/",
+    "pages": ["homepage", "master_detail", "grado_detail", "blog_listing", "blog_detail", "formacion_profesional"]
+  },
+  "page": {
+    "id": "homepage",
+    "clump": "main_website",
+    "route": "/",
+    "title": "Escuela de Cocina y Gastronomía | Barcelona Culinary Hub",
+    "meta": {
+      "description": "Escuela Superior de Gastronomía en Barcelona. Másters, Grado y Formación Profesional en Alta Cocina, Pastelería, Gestión Gastronómica y más.",
+      "keywords": "escuela cocina barcelona, gastronomía, máster cocina, grado gastronomía",
+      "ogImage": "/assets/images/og-homepage.jpg",
+      "language": "es",
+      "locale": "es_ES"
+    },
+    "layout": "default_layout"
+  },
+  "layout": {
+    "id": "default_layout",
+    "name": "Default Site Layout",
+    "structure": [
+      {
+        "section": "header",
+        "organism": "main_header",
+        "position": "fixed"
+      },
+      {
+        "section": "main",
+        "organisms": [
+          "hero_banner",
+          "featured_content",
+          "value_props",
+          "blog_preview",
+          "quotes_carousel",
+          "programs_online",
+          "programs_presencial"
+        ]
+      },
+      {
+        "section": "footer",
+        "organism": "main_footer"
+      }
+    ]
+  },
+  "atoms": {
+    "images": [
+      {
+        "id": "logo_isologotipo",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/themes/custom/sbx_theme/isologotipo.svg",
+          "alt": "Logo Barcelona Culinary Hub",
+          "loading": "eager",
+          "width": "auto",
+          "height": "60"
+        },
+        "styles": {
+          "display": "block",
+          "maxWidth": "100%",
+          "height": "auto"
+        }
+      },
+      {
+        "id": "logo_isologo",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/themes/custom/sbx_theme/isologo.svg",
+          "alt": "Logo Barcelona Culinary Hub",
+          "loading": "eager",
+          "width": "auto",
+          "height": "50"
+        },
+        "styles": {
+          "display": "block"
+        }
+      },
+      {
+        "id": "logo_full",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/themes/custom/sbx_theme/logo.svg",
+          "alt": "Logo Barcelona Culinary Hub",
+          "loading": "eager",
+          "width": "auto",
+          "height": "40"
+        }
+      },
+      {
+        "id": "hero_background",
+        "subatom": "Image",
+        "config": {
+          "src": "/sites/bch.com/files/styles/img_style_16_9_1920/public/images/Chef_Barcelona%20Culinary%20Hub.jpg.webp",
+          "alt": "Chef Barcelona Culinary Hub",
+          "loading": "eager",
+          "width": "1920",
+          "height": "1080"
+        },
+        "styles": {
+          "width": "100%",
+          "height": "100%",
+          "objectFit": "cover"
+        }
+      }
+    ],
+    "headings": [
+      {
+        "id": "hero_heading",
+        "subatom": "Heading",
+        "config": {
+          "level": 1,
+          "content": "ESCUELA SUPERIOR DE GASTRONOMÍA"
+        },
+        "styles": {
+          "color": "var(--color-text-light)",
+          "fontWeight": "var(--font-weight-bold)",
+          "textTransform": "uppercase",
+          "fontSize": "var(--font-size-h1)",
+          "textAlign": "center",
+          "margin": "0"
+        }
+      },
+      {
+        "id": "hero_subheading",
+        "subatom": "Heading",
+        "config": {
+          "level": 2,
+          "content": "APRENDE MUCHO MÁS QUE ALTA COCINA"
+        },
+        "styles": {
+          "color": "var(--color-text-light)",
+          "fontWeight": "var(--font-weight-regular)",
+          "textTransform": "uppercase",
+          "fontSize": "clamp(1rem, 2vw, 1.5rem)",
+          "textAlign": "center",
+          "marginTop": "var(--spacing-md)"
+        }
+      }
+    ],
+    "links": [
+      {
+        "id": "link_home",
+        "subatom": "Link",
+        "config": {
+          "href": "https://www.barcelonaculinaryhub.com/",
+          "target": "_self",
+          "ariaLabel": "Ir a la página principal"
+        }
+      },
+      {
+        "id": "link_masters",
+        "subatom": "Link",
+        "config": {
+          "href": "/programas/masters",
+          "content": "MÁSTERS",
+          "target": "_self"
+        },
+        "styles": {
+          "textDecoration": "none",
+          "color": "var(--color-text)",
+          "fontWeight": "var(--font-weight-medium)"
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "id": "btn_solicita_info",
+        "subatom": "Button",
+        "config": {
+          "type": "button",
+          "content": "Solicita información",
+          "dataAction": "open_modal",
+          "dataTarget": "contact_form_modal"
+        },
+        "styles": {
+          "backgroundColor": "var(--color-secondary)",
+          "color": "var(--color-text)",
+          "padding": "var(--spacing-sm) var(--spacing-lg)",
+          "border": "none",
+          "borderRadius": "4px",
+          "cursor": "pointer",
+          "fontWeight": "var(--font-weight-bold)",
+          "textTransform": "uppercase"
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "id": "input_search",
+        "subatom": "Input",
+        "config": {
+          "type": "text",
+          "name": "search",
+          "placeholder": "Buscar",
+          "ariaLabel": "Buscar en el sitio"
+        },
+        "styles": {
+          "padding": "var(--spacing-sm)",
+          "border": "1px solid var(--color-text-light)",
+          "borderRadius": "4px"
+        }
+      }
+    ]
+  },
+  "molecules": [
+    {
+      "id": "logo_link",
+      "type": "linked_image",
+      "atoms": {
+        "image": "logo_isologotipo",
+        "link": "link_home"
+      },
+      "responsive": [
+        {
+          "breakpoint": "desktop",
+          "atoms": {
+            "image": "logo_isologotipo"
+          }
+        },
+        {
+          "breakpoint": "tablet",
+          "atoms": {
+            "image": "logo_isologo"
+          }
+        },
+        {
+          "breakpoint": "mobile",
+          "atoms": {
+            "image": "logo_full"
+          }
+        }
+      ],
+      "styles": {
+        "display": "inline-block",
+        "transition": "opacity 0.3s ease"
+      },
+      "states": {
+        "hover": {
+          "opacity": 0.8
+        }
+      }
+    },
+    {
+      "id": "search_box",
+      "type": "search_form",
+      "atoms": {
+        "input": "input_search",
+        "button": "btn_search"
+      },
+      "styles": {
+        "display": "flex",
+        "alignItems": "center",
+        "gap": "var(--spacing-sm)"
+      },
+      "events": {
+        "onSubmit": {
+          "action": "navigate",
+          "target": "/search",
+          "method": "GET",
+          "params": ["query"]
+        }
+      }
+    }
+  ],
+  "organisms": [
+    {
+      "id": "main_header",
+      "type": "site_header",
+      "molecules": {
+        "logo": "logo_link",
+        "search": "search_box",
+        "main_navigation": "main_nav",
+        "actions": "header_actions"
+      },
+      "config": {
+        "sticky": true,
+        "transparent": false,
+        "scrollBehavior": "shrink"
+      },
+      "styles": {
+        "position": "sticky",
+        "top": 0,
+        "zIndex": 1000,
+        "backgroundColor": "var(--color-background)",
+        "boxShadow": "0 2px 4px rgba(0,0,0,0.1)",
+        "padding": "var(--spacing-md) var(--spacing-lg)",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "space-between"
+      },
+      "states": {
+        "scrolled": {
+          "padding": "var(--spacing-sm) var(--spacing-lg)",
+          "boxShadow": "0 4px 8px rgba(0,0,0,0.15)"
+        }
+      },
+      "events": {
+        "onScroll": {
+          "action": "toggle_class",
+          "condition": "scrollY > 50",
+          "className": "scrolled"
+        }
+      }
+    },
+    {
+      "id": "hero_banner",
+      "type": "hero_section",
+      "atoms": {
+        "background": "hero_background",
+        "heading": "hero_heading",
+        "subheading": "hero_subheading"
+      },
+      "config": {
+        "overlay": "rgba(0,0,0,0.3)",
+        "alignment": "center",
+        "verticalAlignment": "center",
+        "minHeight": "500px",
+        "aspectRatio": "16/9"
+      },
+      "styles": {
+        "position": "relative",
+        "display": "flex",
+        "flexDirection": "column",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "minHeight": "500px",
+        "padding": "var(--spacing-xxl)",
+        "overflow": "hidden"
+      },
+      "layout": {
+        "background": {
+          "position": "absolute",
+          "top": 0,
+          "left": 0,
+          "width": "100%",
+          "height": "100%",
+          "zIndex": -2
+        },
+        "overlay": {
+          "position": "absolute",
+          "top": 0,
+          "left": 0,
+          "width": "100%",
+          "height": "100%",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "zIndex": -1
+        },
+        "content": {
+          "zIndex": 1,
+          "maxWidth": "1200px"
+        }
+      }
+    },
+    {
+      "id": "quotes_carousel",
+      "type": "carousel",
+      "molecules": [
+        "quote_block_1",
+        "quote_block_2",
+        "quote_block_3"
+      ],
+      "behavior": {
+        "type": "carousel",
+        "autoplay": true,
+        "interval": 5000,
+        "loop": true,
+        "controls": true,
+        "indicators": true,
+        "transition": "fade",
+        "pauseOnHover": true
+      },
+      "styles": {
+        "position": "relative",
+        "width": "100%",
+        "overflow": "hidden"
+      },
+      "controlStyles": {
+        "prev": {
+          "position": "absolute",
+          "left": "var(--spacing-lg)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
+          "backgroundColor": "rgba(255,255,255,0.3)",
+          "border": "none",
+          "borderRadius": "50%",
+          "width": "48px",
+          "height": "48px",
+          "cursor": "pointer"
+        },
+        "next": {
+          "position": "absolute",
+          "right": "var(--spacing-lg)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
+          "backgroundColor": "rgba(255,255,255,0.3)",
+          "border": "none",
+          "borderRadius": "50%",
+          "width": "48px",
+          "height": "48px",
+          "cursor": "pointer"
+        }
+      },
+      "indicatorStyles": {
+        "container": {
+          "position": "absolute",
+          "bottom": "var(--spacing-lg)",
+          "left": "50%",
+          "transform": "translateX(-50%)",
+          "display": "flex",
+          "gap": "var(--spacing-sm)"
+        },
+        "dot": {
+          "width": "12px",
+          "height": "12px",
+          "borderRadius": "50%",
+          "backgroundColor": "rgba(255,255,255,0.5)",
+          "cursor": "pointer"
+        },
+        "dotActive": {
+          "backgroundColor": "rgba(255,255,255,1)"
+        }
+      }
+    },
+    {
+      "id": "main_footer",
+      "type": "site_footer",
+      "sections": [
+        {
+          "type": "footer_branding",
+          "molecules": ["footer_logo_group", "social_links_group"]
+        },
+        {
+          "type": "footer_navigation",
+          "molecules": ["footer_nav_col_1", "footer_nav_col_2"]
+        },
+        {
+          "type": "footer_partners",
+          "molecules": ["partners_logos"]
+        },
+        {
+          "type": "footer_legal",
+          "molecules": ["legal_links", "copyright"]
+        }
+      ],
+      "styles": {
+        "backgroundColor": "var(--color-primary)",
+        "color": "var(--color-text-light)",
+        "padding": "var(--spacing-xxl) var(--spacing-lg)"
+      },
+      "layout": {
+        "display": "grid",
+        "gridTemplateColumns": "repeat(auto-fit, minmax(250px, 1fr))",
+        "gap": "var(--spacing-xl)"
+      }
+    }
+  ]
+}
